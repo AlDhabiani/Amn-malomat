@@ -14,6 +14,10 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out task branch
+        uses: actions/checkout@v4
+        with:
+          ref: arena/f4119213-amn-malomat
       - name: Download public source PDF
         run: |
           curl -L --fail --retry 3 \
