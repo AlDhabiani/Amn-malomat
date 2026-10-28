@@ -1,7 +1,11 @@
 name: Fetch source PDF
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - arena/f4119213-amn-malomat
+    paths:
+      - .github/workflows/fetch-pdf.yml
 
 permissions:
   contents: read
